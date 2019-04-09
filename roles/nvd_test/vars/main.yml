@@ -1,0 +1,9 @@
+---
+# vars file for nvd_test
+names_repo:
+ - name: Nagendra
+   phno: 99999
+ - name: Venkata
+   phno: 77777
+ - name: Dittakavi
+   phno: 55555

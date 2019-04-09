@@ -1,0 +1,15 @@
+echo ""
+echo "***************** Nagendra Details Uploaded Successfully *****************"
+Name: Nagendra
+Phone Number: 99999
+echo "*********************************************************************************"
+echo ""
+echo "***************** Venkata Details Uploaded Successfully *****************"
+Name: Venkata
+Phone Number: 77777
+echo "*********************************************************************************"
+echo ""
+echo "***************** Dittakavi Details Uploaded Successfully *****************"
+Name: Dittakavi
+Phone Number: 55555
+echo "*********************************************************************************"

@@ -1,0 +1,10 @@
+---
+ - hosts: localhost
+   vars:
+    - names_repo:
+       - name: Nagendra Venkata Dittakavi
+         phno: 9985124455
+   vars_files:
+    - my_vars.yml
+   roles:
+    - nvd_test 

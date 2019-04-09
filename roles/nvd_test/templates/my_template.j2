@@ -1,0 +1,7 @@
+{% for each_name in names_repo %}
+echo ""
+echo "***************** {{ each_name.name }} Details Uploaded Successfully *****************"
+Name: {{ each_name.name }}
+Phone Number: {{ each_name.phno }}
+echo "*********************************************************************************"
+{% endfor %}

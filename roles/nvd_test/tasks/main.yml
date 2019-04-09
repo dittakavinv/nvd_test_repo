@@ -1,0 +1,9 @@
+---
+# tasks file for nvd_test
+ - name: Test the Template
+   template:
+      src: "my_template.j2"
+      dest: "my_template.txt"
+   register: tem_status
+ - debug:
+      var: tem_status.stdout_lines
