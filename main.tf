@@ -51,14 +51,5 @@ resource "aws_instance" "sandbox_instance" {
   availability_zone           = "${var.avail_zone}"
   key_name                    = "${aws_key_pair.sandbox_key_pair.id}"
   vpc_security_group_ids      = ["${aws_security_group.sandbox_sg_group.id}"]
-
-  }
-    tags = {
-    	Name = "${var.inst_name}"
-	Deployment = "Platform"
-	Product = "${var.tfplatform}"
-	Environment = "${var.tfenv}"
-  }
-  
 }
 
