@@ -1,19 +1,19 @@
-variable "aws_region" {
-  description = "AWS region"
-  default = "us-west-1"
-}
+/* Variables for Creating the Sandbox */
 
-variable "ami_id" {
-  description = "ID of the AMI to provision. Default is Ubuntu 14.04 Base Image"
-  default = "ami-2e1ef954"
-}
-
-variable "instance_type" {
-  description = "type of EC2 instance to provision."
-  default = "t2.micro"
-}
-
-variable "name" {
-  description = "name to pass to Name tag"
-  default = "Provisioned by Terraform"
-}
+variable "vpc_id" {}
+variable "key_pair" {}
+variable "sg_group" {}
+variable "inst_name" {}
+variable "ssh_key" {}
+variable "acs_key" {}
+variable "sec_key" {}
+variable "region" {}
+variable "inst_type" {}
+variable "ami_name" {}
+variable "avail_zone" {}
+variable "tfport" {}
+variable "tfenv" {}
+variable "tfvol" {}
+variable "tfcidr" {}
+variable "tfplatform" {}
+variable "pemfile" {}
