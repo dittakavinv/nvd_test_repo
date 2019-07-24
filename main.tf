@@ -6,11 +6,6 @@ provider "aws" {
   region     = "${var.region}"
 }
 
-resource "aws_eip_association" "sandbox_eip_assoc" {
-  instance_id   = "${aws_instance.sandbox_instance.id}"
-  allocation_id = "${aws_eip.sandbox.id}"
-}
-
 resource "aws_key_pair" "sandbox_key_pair" {
   key_name   = "${var.key_pair}"
   public_key = "${var.ssh_key}"
