@@ -52,10 +52,6 @@ resource "aws_instance" "sandbox_instance" {
   key_name                    = "${aws_key_pair.sandbox_key_pair.id}"
   vpc_security_group_ids      = ["${aws_security_group.sandbox_sg_group.id}"]
 
-  root_block_device = {
-    volume_type           = "gp2"
-    volume_size           = "${var.tfvol}"
-    delete_on_termination = true
   }
     tags = {
     	Name = "${var.inst_name}"
