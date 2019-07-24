@@ -1,6 +1,6 @@
 
 /* Values to the Variables for running the terraform script*/
-
+vpc_id		= "vpc-06d06ec2e64694598"
 key_pair        = "DEV-SANDBOX-K8S-KEY"
 sg_group        = "DEV-SANDBOX-K8S-SECURITY-GROUP"
 inst_name       = "DEV-SANDBOX-K8S-ANSIBLE"
