@@ -2,9 +2,9 @@ variable "vpc_id" {default = "vpc-06d06ec2e64694598"}
 variable "key_pair" {default = "DEV-SANDBOX-K8S-KEY"}
 variable "sg_group" {default = "DEV-SANDBOX-K8S-SECURITY-GROUP"}
 variable "inst_name" {default = "DEV-SANDBOX-K8S-ANSIBLE"}
-variable "ssh_key" {default = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDKXRpZ7EJQEhdM6L12lr09S9QRTYW+SCtLrkVYZn30hpfxyCOwKWT82L5H3VsLPDVFABIhpYHWy5qU/CHSifsujX+43B6eirJqSmssbf4Ikez+TE89CWgr+ZIgBy/egIiggDX82guy+O08yAfYMBFcuPDF9214CgcPu46njTEtK7zUMroKOhVRiBUi7V8YJMKCx1txwk82gBdJtgNv5xabo2XeRSetQnu+sWn5hsHtqbjNRz0oL14QpLz8NY26JSVoz+gCjNLFNpxI4K08qDj83SXTPN4QbUZG/5MCEIV4BXYGfaq8+NVinW2iG3auZTtNAcISBzD5xOPul/2WvK7V root@ip-172-20-2-39"}
-variable "acs_key" {default = "AKIA4ODYXPKN3IPIAECN"}
-variable "sec_key" {default = "r+ytQ0OXMXi7YxFbUWEt0rcutOBxAnBCx5yj/A2/"}
+variable "ssh_key" {}
+variable "acs_key" {}
+variable "sec_key" {}
 variable "region" {default = "us-east-2"}
 variable "inst_type" {default = "t2.micro"}
 variable "ami_name" {default = "ami-0986c2ac728528ac2"}
