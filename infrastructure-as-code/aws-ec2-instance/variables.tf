@@ -1,19 +1,17 @@
-variable "aws_region" {
-  description = "AWS region"
-  default = "us-west-1"
-}
-
-variable "ami_id" {
-  description = "ID of the AMI to provision. Default is Ubuntu 14.04 Base Image"
-  default = "ami-2e1ef954"
-}
-
-variable "instance_type" {
-  description = "type of EC2 instance to provision."
-  default = "t2.micro"
-}
-
-variable "name" {
-  description = "name to pass to Name tag"
-  default = "Provisioned by Terraform"
-}
+variable "vpc_id" {default = "vpc-06d06ec2e64694598"}
+variable "key_pair" {default = "DEV-SANDBOX-K8S-KEY"}
+variable "sg_group" {default = "DEV-SANDBOX-K8S-SECURITY-GROUP"}
+variable "inst_name" {default = "DEV-SANDBOX-K8S-ANSIBLE"}
+variable "ssh_key" {default = ""}
+variable "acs_key" {default = ""}
+variable "sec_key" {default = ""}
+variable "region" {default = "us-east-2"}
+variable "inst_type" {default = "t2.micro"}
+variable "ami_name" {default = "ami-0986c2ac728528ac2"}
+variable "avail_zone" {default = "us-east-2a"}
+variable "tfport" {default = "22"}
+variable "tfenv" {default = "POC"}
+variable "tfvol" {default = "10"}
+variable "tfcidr" {default = "0.0.0.0/0"}
+variable "tfplatform" {default = "Nagendra - POC"}
+variable "pemfile" {default = "DEV-SANDBOX-K8S-KEY.pem"}
