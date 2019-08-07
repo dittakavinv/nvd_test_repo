@@ -14,4 +14,4 @@ variable "tfenv" {default = "POC"}
 variable "tfvol" {default = "10"}
 variable "tfcidr" {default = "0.0.0.0/0"}
 variable "tfplatform" {default = "Nagendra - POC"}
-variable "pemfile" {default = "DEV-SANDBOX-K8S-KEY.pem"}
+variable "pemfile" {default = "TERRAFORM_TEST_KEY.pem"}
