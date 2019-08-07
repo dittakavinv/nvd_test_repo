@@ -15,3 +15,6 @@ variable "tfvol" {default = "10"}
 variable "tfcidr" {default = "0.0.0.0/0"}
 variable "tfplatform" {default = "Nagendra - POC"}
 variable "pemfile" {default = "TERRAFORM_TEST_KEY.pem"}
+variable "tag01" {default = "Platform"}
+variable "tag02" {default = "Nagendra - POC"}
+variable "tago3" {default = "POC"}
