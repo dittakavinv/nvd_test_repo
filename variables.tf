@@ -1,7 +1,7 @@
-variable "vpc_id" {default = "vpc-06d06ec2e64694598"}
-variable "key_pair" {default = "DEV-SANDBOX-K8S-KEY"}
-variable "sg_group" {default = "DEV-SANDBOX-K8S-SECURITY-GROUP"}
-variable "inst_name" {default = "DEV-SANDBOX-K8S-ANSIBLE"}
+variable "vpc_id" {}
+variable "key_pair" {}
+variable "sg_group" {}
+variable "inst_name" {}
 variable "ssh_key" {}
 variable "acs_key" {}
 variable "sec_key" {}
