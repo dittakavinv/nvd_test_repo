@@ -1,4 +1,4 @@
-/* Script to create Sandbox*/
+/* Script to create an EC2 Instance*/
   
 provider "aws" {
   access_key = "${var.acs_key}"
@@ -6,46 +6,46 @@ provider "aws" {
   region     = "${var.region}"
 }
 
-resource "aws_key_pair" "sandbox_key_pair" {
+resource "aws_key_pair" "ec2_key_pair" {
   key_name   = "${var.key_pair}"
   public_key = "${var.ssh_key}"
 }
 
-resource "aws_security_group" "sandbox_sg_group" {
+resource "aws_security_group" "ec2_sg_group" {
   name        = "${var.sg_group}"
   vpc_id      = "${var.vpc_id}"
-  description = "Security group for k8s Ansible Dev"
+  description = "${var.sg_desc}"
 
   tags = {
     Name      = "${var.sg_group}"
   }
 }
 
-resource "aws_security_group_rule" "sandbox-egress" {
+resource "aws_security_group_rule" "ec2-egress" {
   type              = "egress"
-  security_group_id = "${aws_security_group.sandbox_sg_group.id}"
+  security_group_id = "${aws_security_group.ec2_sg_group.id}"
   from_port         = 0
   to_port           = 0
   protocol          = "-1"
   cidr_blocks       = ["0.0.0.0/0"]
 }
 
-resource "aws_security_group_rule" "sandbox-ssh" {
+resource "aws_security_group_rule" "ec2-ssh" {
   type              = "ingress"
-  security_group_id = "${aws_security_group.sandbox_sg_group.id}"
+  security_group_id = "${aws_security_group.ec2_sg_group.id}"
   from_port         = "${var.tfport}"
   to_port           = "${var.tfport}"
   protocol          = "tcp"
   cidr_blocks       = ["${var.tfcidr}"]
-  description       = "N Heights Network"
+  description       = "${var.cidr_desc}"
 }
 
-resource "aws_instance" "sandbox_instance" {
+resource "aws_instance" "ec2_instance" {
   ami                         = "${var.ami_name}"
   instance_type               = "${var.inst_type}"
   availability_zone           = "${var.avail_zone}"
-  key_name                    = "${aws_key_pair.sandbox_key_pair.id}"
-  vpc_security_group_ids      = ["${aws_security_group.sandbox_sg_group.id}"]
+  key_name                    = "${aws_key_pair.ec2_key_pair.id}"
+  vpc_security_group_ids      = ["${aws_security_group.ec2_sg_group.id}"]
 
   tags = {
         Name = "${var.inst_name}"
@@ -54,4 +54,3 @@ resource "aws_instance" "sandbox_instance" {
 	Environment = "${var.tag03}"
        }
 }
-
